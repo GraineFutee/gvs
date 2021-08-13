@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 
 import NavBar from "../components/NavBar";
 
@@ -27,9 +28,14 @@ export default function Home() {
           <div className="container has-text-centered">
             <div className="columns">
               <div className="column is-half">
-                <p className="title">
-                  <img src="/logo_white.webp" />
-                </p>
+                <Image
+                  src="/logo_white.webp"
+                  alt="gvs logo"
+                  width="100%"
+                  height="100%"
+                />
+                {/* <p className="title">
+                </p> */}
               </div>
             </div>
           </div>
@@ -137,32 +143,62 @@ export default function Home() {
             <div className="column is-2" />
             <div className="column">
               <figure className="image">
-                <img src="/logos/redbull.webp" />
+                <Image
+                  src="/logos/redbull.webp"
+                  alt="redbull logo"
+                  width="100%"
+                  height="100%"
+                />
               </figure>
             </div>
             <div className="column">
               <figure className="image">
-                <img src="/logos/sony.webp" />
+                <Image
+                  src="/logos/sony.webp"
+                  alt="sony logo"
+                  width="100%"
+                  height="100%"
+                />
               </figure>
             </div>
             <div className="column">
               <figure className="image">
-                <img src="/logos/warner.webp" />
+                <Image
+                  src="/logos/warner.webp"
+                  alt="warner logo"
+                  width="100%"
+                  height="100%"
+                />
               </figure>
             </div>
             <div className="column">
               <figure className="image">
-                <img src="/logos/because.webp" />
+                <Image
+                  src="/logos/because.webp"
+                  alt="because logo"
+                  width="100%"
+                  height="100%"
+                />
               </figure>
             </div>
             <div className="column">
               <figure className="image">
-                <img src="/logos/universal.webp" />
+                <Image
+                  src="/logos/universal.webp"
+                  alt="universal logo"
+                  width="100%"
+                  height="100%"
+                />
               </figure>
             </div>
             <div className="column">
               <figure className="image">
-                <img src="/logos/rec118.webp" />
+                <Image
+                  src="/logos/rec118.webp"
+                  alt="rec118 logo"
+                  width="100%"
+                  height="100%"
+                />
               </figure>
             </div>
             <div className="column is-2" />
@@ -254,20 +290,21 @@ export default function Home() {
               d’E-Mastering : Envoyez directement vos fichiers à Grande ville
               studio Mastering via notre Wetransfer ou notre serveur FTP
               n’hésitez pas à nous communiquer vos références musicales ainsi
-              que vos directives. Afin d'écouter et d'approuver le Mastering
-              malgré la distance, nous mettons à votre disposition notre lecteur
-              de référence « HOFA DDP Player » (sécurisé et disponible pour Mac
-              et PC). Il vous permettra également de graver un CD Audio,
-              d'exporter des fichiers WAV et enfin de valider le Master DDP
-              avant le départ à l’usine (pauses, fades, codes ISRC, CD text...).
-              Grande ville studioMastering vous propose de travailler à distance
-              grâce à un service d’E-Mastering personnalisé ou d’assister, sur
-              rendez-vous, aux séances en compagnie de notre ingénieur. Nous
-              recommandons l'envoi de fichiers audio WAV ou AIFF, entrelacés en
-              24bit-44.1kHz minimum. Nous acceptons tous les supports de
-              fichiers audios numériques (disque dur, clé USB, DVD, DAT, etc. ),
-              mais également les supports analogiques suivants : ¼ de pouce, ½
-              pouce et autres sur demande.
+              que vos directives. Afin d&apos;écouter et d&apos;approuver le
+              Mastering malgré la distance, nous mettons à votre disposition
+              notre lecteur de référence « HOFA DDP Player » (sécurisé et
+              disponible pour Mac et PC). Il vous permettra également de graver
+              un CD Audio, d&apos;exporter des fichiers WAV et enfin de valider
+              le Master DDP avant le départ à l’usine (pauses, fades, codes
+              ISRC, CD text...). Grande ville studioMastering vous propose de
+              travailler à distance grâce à un service d’E-Mastering
+              personnalisé ou d’assister, sur rendez-vous, aux séances en
+              compagnie de notre ingénieur. Nous recommandons l&apos;envoi de
+              fichiers audio WAV ou AIFF, entrelacés en 24bit-44.1kHz minimum.
+              Nous acceptons tous les supports de fichiers audios numériques
+              (disque dur, clé USB, DVD, DAT, etc. ), mais également les
+              supports analogiques suivants : ¼ de pouce, ½ pouce et autres sur
+              demande.
             </p>
             <button className="button is-large is-dark">
               <Link href="/dashboard">Commencer!</Link>

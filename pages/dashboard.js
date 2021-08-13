@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
+import Image from "next/image";
 import React, { useState } from "react";
 
 import NavBar from "../components/NavBar";
@@ -79,7 +80,7 @@ export default function Home() {
               </table>
             ) : (
               <p className="title">
-                <img src="/logo_white.webp" />
+                <Image src="/logo_white.webp" alt="gvs logo" />
               </p>
             )}
             <div className="buttons is-centered">

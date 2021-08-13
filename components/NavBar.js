@@ -1,23 +1,19 @@
+import Link from "next/link";
+
 export default function NavBar() {
   return (
     <nav className="navbar">
       <div className="container">
         <div id="navMenu" className="navbar-menu">
           <div className="navbar-start">
-            <a className="navbar-item" href="/">
-              Home
-            </a>
+            <Link href="/">Home</Link>
           </div>
 
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <a className="button is-info" href="/dashboard">
-                  Log in
-                </a>
-                <a className="button is-light" href="/commande">
-                  Commander
-                </a>
+                <Link href="/dashboard">Log in</Link>
+                <Link href="/commande">Commander</Link>
               </div>
             </div>
           </div>
