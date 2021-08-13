@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+// ----------
+
+$primary: #ffb142;
+$link: #34ace0;
+$info: #706fd3;
+$success: #33d9b2;
+$warning: #ff793f;
+$danger: #ff5252;
+$dark: #84817a;
+
+@import "../node_modules/bulma/bulma.sass";
+@import "../node_modules/bulma-steps-component/bulma-steps.sass";
