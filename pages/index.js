@@ -31,8 +31,8 @@ export default function Home() {
                 <Image
                   src="/logo_white.webp"
                   alt="gvs logo"
-                  width="100%"
-                  height="100%"
+                  width="200%"
+                  height="200%"
                 />
                 {/* <p className="title">
                 </p> */}

@@ -79,9 +79,14 @@ export default function Home() {
                 </tbody>
               </table>
             ) : (
-              <p className="title">
-                <Image src="/logo_white.webp" alt="gvs logo" />
-              </p>
+              <div className="title">
+                <Image
+                  src="/logo_white.webp"
+                  alt="gvs logo"
+                  height="200%"
+                  width="200%"
+                />
+              </div>
             )}
             <div className="buttons is-centered">
               <button

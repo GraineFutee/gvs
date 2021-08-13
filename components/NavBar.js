@@ -6,14 +6,22 @@ export default function NavBar() {
       <div className="container">
         <div id="navMenu" className="navbar-menu">
           <div className="navbar-start">
-            <Link href="/">Home</Link>
+            <Link href="/">
+              <button className="navbar-item button is-dark">Home</button>
+            </Link>
           </div>
 
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <Link href="/dashboard">Log in</Link>
-                <Link href="/commande">Commander</Link>
+                <Link href="/dashboard">
+                  <button className="navbar-item button is-info">Log in</button>
+                </Link>
+                <Link href="/commande">
+                  <button className="navbar-item button is-light">
+                    Commander
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
