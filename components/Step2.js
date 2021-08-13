@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
 export default function Step2({}) {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [waitingCode, setWaitingCode] = useState(false);
   const [error, setError] = useState(null);
 
@@ -29,7 +31,9 @@ export default function Step2({}) {
             className="input"
             type="email"
             placeholder="Email input"
-            value="hello@"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            disabled={waitingCode}
           />
           <span className="icon is-small is-left">
             <i className="fas fa-envelope"></i>
@@ -48,7 +52,9 @@ export default function Step2({}) {
             className="input"
             type="text"
             placeholder="Nom complet"
-            value="bulma"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+            disabled={waitingCode}
           />
           <span className="icon is-small is-left">
             <i className="fas fa-user"></i>
@@ -88,7 +94,13 @@ export default function Step2({}) {
       <button
         style={{ margin: "8px" }}
         className="button is-primary"
-        onClick={() => setWaitingCode(true)}
+        onClick={() => {
+          if (email && name) {
+            setWaitingCode(true);
+            return setError(null);
+          }
+          return setError("Merci de taper votre adresse email et votre nom");
+        }}
       >
         Suivant
       </button>
