@@ -18,7 +18,7 @@ export default function Home() {
 
       <NavBar />
 
-      <section className="hero is-warning is-bold is-fullheight-with-navbar">
+      <section className="hero is-link is-bold is-fullheight-with-navbar">
         <div className="hero-body">
           <div className="container has-text-centered">
             {connected ? (
@@ -90,7 +90,9 @@ export default function Home() {
             )}
             <div className="buttons is-centered">
               <button
-                className={`button ${connected ? "is-danger" : "is-info"}`}
+                className={`button is-light ${
+                  connected ? "is-danger" : "is-link"
+                }`}
                 onClick={() => setConnected(!connected)}
               >
                 {connected ? "Log Out" : "Log In"}

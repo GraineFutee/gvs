@@ -15,7 +15,7 @@ export default function NavBar() {
             <div className="navbar-item">
               <div className="buttons">
                 <Link href="/dashboard">
-                  <button className="navbar-item button is-info">Log in</button>
+                  <button className="navbar-item button is-link">Log in</button>
                 </Link>
                 <Link href="/commande">
                   <button className="navbar-item button is-light">

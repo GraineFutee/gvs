@@ -1,5 +1,6 @@
 import Head from "next/head";
 import React, { useState } from "react";
+import Link from "next/link";
 
 import NavBar from "../components/NavBar";
 import Step0 from "../components/Step0";
@@ -21,77 +22,110 @@ export default function Home() {
 
       <NavBar />
 
-      <section className="hero is-info is-bold is-fullheight-with-navbar">
+      <section className="hero is-link is-bold is-fullheight-with-navbar">
         <div className="hero-body">
-          <div className="container has-text-centered">
-            <ul className="steps is-narrow is-medium is-centered has-content-centered">
-              <li className={`steps-segment ${step === 0 && "is-active"}`}>
-                <span className="steps-marker">
-                  <span className="icon">
-                    <i className="fa fa-cloud-upload-alt"></i>
-                  </span>
-                </span>
-                <div className="steps-content">
-                  <p className="heading">Fichiers</p>
+          <div className="container">
+            <div className="box">
+              <div className="columns">
+                <div className="column">
+                  <div className="card">
+                    <div className="card-image">
+                      <figure className="image is-3by2">
+                        <img
+                          src="https://bulma.io/images/placeholders/1280x960.png"
+                          alt="Placeholder image"
+                        />
+                      </figure>
+                    </div>
+                  </div>
                 </div>
-              </li>
-              <li className={`steps-segment ${step === 1 && "is-active"}`}>
-                <span className="steps-marker">
-                  <span className="icon">
-                    <i className="fa fa-concierge-bell"></i>
-                  </span>
-                </span>
-                <div className="steps-content">
-                  <p className="heading">Choix du service</p>
+                <div className="column">
+                  <div>
+                    <div className="field">
+                      <label className="label">Service</label>
+                      <div className="control">
+                        <div className="select is-fullwidth">
+                          <select>
+                            <option>Stereo mastering</option>
+                            <option>Stems mastering</option>
+                            <option>Mixage</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="field">
+                      <label className="label">Nombre de tracks</label>
+                      <div className="control">
+                        <input
+                          className="input"
+                          type="number"
+                          placeholder={0}
+                        />
+                      </div>
+                    </div>
+                    <div className="field">
+                      <label className="label">Delai</label>
+                      <div className="control">
+                        <div className="select is-fullwidth">
+                          <select>
+                            <option>Normal (~1 semaine)</option>
+                            <option>Rapide (~3 jours)</option>
+                            <option>Express (~1 jour)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* <div className="field">
+                      <label className="label">Message</label>
+                      <div className="control">
+                        <textarea
+                          className="textarea"
+                          placeholder="Textarea"
+                        ></textarea>
+                      </div>
+                    </div> */}
+
+                    <div className="field">
+                      <div className="control">
+                        <label className="checkbox">
+                          <input type="checkbox" /> I agree to the{" "}
+                          <a href="#">terms and conditions</a>
+                        </label>
+                      </div>
+                    </div>
+
+                    <div className="has-text-right my-5 mr-3">
+                      <p className="title is-2 has-text-link">80€</p>
+                    </div>
+
+                    {/* <div className="field">
+                      <div className="control">
+                        <label className="radio">
+                          <input type="radio" name="question" />
+                          Yes
+                        </label>
+                        <label className="radio">
+                          <input type="radio" name="question" />
+                          No
+                        </label>
+                      </div>
+                    </div> */}
+
+                    <div className="field is-grouped is-grouped-right">
+                      <div className="control">
+                        <button className="button is-link">Commander</button>
+                      </div>
+                      <div className="control">
+                        <button className="button is-link is-light">
+                          <Link href="/">Annuler</Link>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </li>
-              <li className={`steps-segment ${step === 2 && "is-active"}`}>
-                <span className="steps-marker">
-                  <span className="icon">
-                    <i className="fa fa-user"></i>
-                  </span>
-                </span>
-                <div className="steps-content">
-                  <p className="heading">Informations</p>
-                </div>
-              </li>
-              <li
-                className={`steps-segment has-gaps ${
-                  step === 4 && "is-active"
-                }`}
-              >
-                <span className="steps-marker">
-                  <span className="icon">
-                    <i className="fa fa-money-check-alt"></i>
-                  </span>
-                </span>
-                <div className="steps-content">
-                  <p className="heading">Payment</p>
-                </div>
-              </li>
-              <li className={`steps-segment ${step === 4 && "is-active"}`}>
-                <span className="steps-marker is-hollow">
-                  <span className="icon">
-                    <i className="fa fa-check"></i>
-                  </span>
-                </span>
-                <div className="steps-content">
-                  <p className="heading">Confirmation</p>
-                </div>
-              </li>
-            </ul>
-            {step === 0 && (
-              <Step0 files={files} setFiles={setFiles} setStep={setStep} />
-            )}
-            {step === 1 && (
-              <Step1
-                files={files}
-                service={service}
-                setService={setService}
-                setStep={setStep}
-              />
-            )}
-            {step === 2 && <Step2 />}
+              </div>
+            </div>
           </div>
         </div>
       </section>
